@@ -504,7 +504,12 @@ main {
   line-height: 1.6;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.about-text p { margin-bottom: 10px; }
 
 
 
