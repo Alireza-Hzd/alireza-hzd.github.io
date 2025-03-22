@@ -487,7 +487,17 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+/* Underline the author links */
+.author {
+  text-decoration: underline;
+  color: #00aaff; /* optional: color change for the underlined text */
+}
 
+/* Optional: add styling for the anchor tags themselves */
+a.author {
+  text-decoration: underline;
+  color: #00aaff; /* Optional color */
+}
 
 /*-----------------------------*/
 /* ABOUT SECTION STYLES        */
