@@ -490,31 +490,20 @@ main {
 
 
 
-.about-text {
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-  line-height: 1.6;
-  max-width: 800px;  /* Prevents the text from stretching too wide */
-  margin: 0 auto;    /* Centers the content */
-  padding: 0;   
-  height: auto !important;  
-  min-height: auto !important; /* Remove forced minimum height */
-/* Allow it to shrink */
-}
-
-.about-text p { 
-  margin-bottom: 10px; 
-}
-
 .about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Avoid stretching */
-  flex-grow: 0;
-  height: auto;
+  height: auto !important; /* Allow height to adjust based on content */
+  margin: 0 auto;  /* Center the content and remove the large margins */
+  padding: 0 30px; /* Reset padding, keeping only horizontal padding */
+  display: block;  /* Avoid any flex or grid behavior that might force stretch */
 }
+
+.about-text {
+  height: auto !important; /* Ensure content height isn't forced */
+  margin: 0;  /* Reset margin */
+  padding: 0;  /* Reset padding */
+  max-width: 100%; /* Remove any unnecessary width constraints */
+}
+
 
 /**
  * #service 
