@@ -490,29 +490,26 @@ main {
 
 
 
-
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
-
-.about .article-title { margin-bottom: 10px; }
-
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-  margin: 0;  /* Reset any unwanted margins */
-  padding: 0; /* Reset any unwanted padding */
+  max-width: 800px;  /* Prevents the text from stretching too wide */
+  margin: 0 auto;    /* Centers the content */
+  padding: 0;        /* Reset padding */
 }
 
-.about-text {
-  padding-bottom: 0;
-  margin-bottom: 0;
+.about-text p { 
+  margin-bottom: 10px; 
 }
 
-.about-text p { margin-bottom: 10px; }
-
+/* Ensure parent container doesn't stretch too much */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 /**
