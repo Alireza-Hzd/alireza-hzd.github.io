@@ -493,47 +493,59 @@ main {
 /* ABOUT SECTION STYLES        */
 /*-----------------------------*/
 
-/* Set background and text color properly */
-.about, .about-text {
-  background-color: rgb(30, 30, 31) !important; /* Dark background */
+/* Global Reset to Remove Unwanted Spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color: rgb(30, 30, 31); /* Dark background */
+  color: #fff; /* White text */
+  font-family: Poppins, sans-serif;
+  height: 100%; /* Full height for body */
+}
+
+/* Adjust .about and .about-text */
+.about {
+  display: block; /* Ensure it's not affected by flexbox or grid */
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Maximum width for readability */
+  margin: 0 auto; /* Center the content */
+  padding: 20px 30px; /* Space around the content */
+  background-color: rgb(30, 30, 31); /* Dark background */
 }
 
 .about-text {
   color: #fff !important; /* White text for better contrast */
-  font-size: 16px; /* Adjust font size for better readability */
+  font-size: 16px; /* Set a readable font size */
+  font-weight: 300; /* Lighter font weight */
   line-height: 1.6;
-  padding: 20px; /* Padding for better spacing */
-  margin: 0; /* Ensure no unwanted margin */
+  padding: 20px; /* Padding for spacing around text */
+  margin-bottom: 0; /* Remove bottom margin */
+  height: auto !important; /* Allow height to adjust based on content */
+  min-height: 0; /* Reset min-height */
+  max-width: 100%; /* Allow text to take full width */
+  display: block; /* Ensure it’s a block element */
+  overflow: visible; /* Ensure content is fully visible */
 }
 
-/* Ensure no extra space in about-text */
-.about-text {
-  height: auto !important; /* Let it grow according to content */
-  min-height: auto !important;
-}
-/* General container adjustments for space */
-.about {
-  padding: 20px 30px;
-  margin: 0;
-  width: 100%; /* Ensure it uses the full width */
+/* Ensuring paragraphs inside .about-text have spacing */
+.about-text p {
+  margin-bottom: 10px;
 }
 
-.about-text {
-  margin: 0; /* Reset margin to eliminate extra space */
-  padding: 0; /* Reset padding */
-  height: auto !important; /* Allow the height to grow based on content */
-  min-height: auto !important;
+/* Make sure links are styled clearly */
+.about-text a {
+  color: #5ab2f0; /* Light blue color for links */
+  text-decoration: none;
 }
 
-/* Ensure no flex or grid properties interfere */
-.about {
-  display: block;
+.about-text a:hover {
+  text-decoration: underline;
 }
-/* Remove any unwanted flex settings */
-.about, .about-text {
-  display: block;
-  height: auto !important;
-}
+
 
 
 
