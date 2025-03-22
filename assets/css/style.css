@@ -495,7 +495,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-  max-width: 800px;  /* Prevents the text from stretching too wide */
+  max-width: 12000px;  /* Prevents the text from stretching too wide */
   margin: 0 auto;    /* Centers the content */
   padding: 0;        /* Reset padding */
 }
