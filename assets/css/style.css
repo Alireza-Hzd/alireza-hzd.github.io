@@ -493,37 +493,46 @@ main {
 /* ABOUT SECTION STYLES        */
 /*-----------------------------*/
 
-.about {
-  display: block;
-  margin: 0 auto; /* Center the element */
-  padding: 30px;
-  max-width: 100%; /* Ensure content can expand */
+/* Set background and text color properly */
+.about, .about-text {
+  background-color: rgb(30, 30, 31) !important; /* Dark background */
 }
 
 .about-text {
-  color: var(--light-gray) !important; /* Ensure text is the correct color */
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  color: #fff !important; /* White text for better contrast */
+  font-size: 16px; /* Adjust font size for better readability */
   line-height: 1.6;
-  margin: 0; /* Reset any unwanted margins */
-  padding: 0; /* Reset any unwanted padding */
-  max-width: 800px; /* Limit the width */
-  text-align: left; /* Optional: Align the text to the left */
+  padding: 20px; /* Padding for better spacing */
+  margin: 0; /* Ensure no unwanted margin */
 }
 
-.about-text p {
-  margin-bottom: 10px; /* Space between paragraphs */
-}
-
-/* Remove unnecessary height from about-text */
+/* Ensure no extra space in about-text */
 .about-text {
-  height: auto !important;
+  height: auto !important; /* Let it grow according to content */
+  min-height: auto !important;
+}
+/* General container adjustments for space */
+.about {
+  padding: 20px 30px;
+  margin: 0;
+  width: 100%; /* Ensure it uses the full width */
+}
+
+.about-text {
+  margin: 0; /* Reset margin to eliminate extra space */
+  padding: 0; /* Reset padding */
+  height: auto !important; /* Allow the height to grow based on content */
   min-height: auto !important;
 }
 
-/* Add this to reset any inherited background color on the text */
-body, .about-text {
-  background-color: #1e1e1f; /* Dark background */
+/* Ensure no flex or grid properties interfere */
+.about {
+  display: block;
+}
+/* Remove any unwanted flex settings */
+.about, .about-text {
+  display: block;
+  height: auto !important;
 }
 
 
