@@ -489,23 +489,43 @@ main {
 
 
 
+/*-----------------------------*/
+/* ABOUT SECTION STYLES        */
+/*-----------------------------*/
 
 .about {
-  height: auto !important; /* Allow height to adjust based on content */
-  margin: 0 auto;  /* Center the content and remove the large margins */
-  padding: 0 30px; /* Reset padding, keeping only horizontal padding */
-  display: block;  /* Avoid any flex or grid behavior that might force stretch */
+  display: block;
+  margin: 0 auto; /* Center the element */
+  padding: 30px;
+  max-width: 100%; /* Ensure content can expand */
 }
 
 .about-text {
-	
+  color: var(--light-gray) !important; /* Ensure text is the correct color */
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
-  height: auto !important; /* Ensure content height isn't forced */
-  margin: 0;  /* Reset margin */
-  padding: 0;  /* Reset padding */
-  max-width: 100%; /* Remove any unnecessary width constraints */
+  line-height: 1.6;
+  margin: 0; /* Reset any unwanted margins */
+  padding: 0; /* Reset any unwanted padding */
+  max-width: 800px; /* Limit the width */
+  text-align: left; /* Optional: Align the text to the left */
 }
+
+.about-text p {
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Remove unnecessary height from about-text */
+.about-text {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Add this to reset any inherited background color on the text */
+body, .about-text {
+  background-color: #1e1e1f; /* Dark background */
+}
+
 
 
 /**
