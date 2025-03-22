@@ -495,13 +495,15 @@ main {
   #ABOUT
 \*-----------------------------------*/
 
-.about .article-title { margin-bottom: 15px; }
+.about .article-title { margin-bottom: 10px; }
 
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin: 0;  /* Reset any unwanted margins */
+  padding: 0; /* Reset any unwanted padding */
 }
 
 .about-text {
